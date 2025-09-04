@@ -12,6 +12,10 @@
   <depend>rclcpp</depend>
   <depend>sensor_msgs</depend>
   <depend>threat_detection_interfaces</depend>
+  <depend>cv_bridge</depend>
+  <depend>image_transport</depend>
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
