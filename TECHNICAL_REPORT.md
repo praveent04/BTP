@@ -558,3 +558,8 @@ The system is ready for integration into the broader threat detection platform a
 **Date:** September 4, 2025
 **Author:** Kilo Code (Software Engineer)
 **Review Status:** Technical Review Complete
+
+### run commands for window testing
+python validate_code.py
+cd D:\BTP\ros2_ws; (Get-ChildItem -Recurse -Include *.cpp,*.py | Measure-Object).Count
+Get-ChildItem -Recurse -Include *.cpp,*.py | Get-Content | Measure-Object -Line | Select-Object -ExpandProperty Lines

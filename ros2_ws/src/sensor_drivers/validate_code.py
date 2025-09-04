@@ -214,12 +214,15 @@ class ValidationTests:
 
             time_diff = abs(thermal_avg - optical_avg)
 
-            print(".3f")
+            print(f"  Time difference: {time_diff:.3f}s")
 
-            if time_diff < 0.1:
+            # For different frame rates, check if difference is reasonable
+            # Thermal: ~10 FPS (0.1s intervals), Optical: ~30 FPS (0.033s intervals)
+            # Expected difference should be less than the thermal frame interval
+            if time_diff < 0.15:  # Allow some tolerance for processing time
                 print("  [GOOD] Time synchronization: GOOD")
                 return True
-            elif time_diff < 0.5:
+            elif time_diff < 0.3:
                 print("  [WARNING] Time synchronization: WARNING")
                 return True
             else:
