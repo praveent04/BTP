@@ -1,0 +1,125 @@
+# ============================================
+# Python Threat Detection System .gitignore
+# ============================================
+
+# Python
+# ======
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+
+# C extensions
+*.so
+*.dll
+*.dylib
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+# ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# OS
+# ==
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.directory
+
+# ROS2
+# ====
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Project Specific
+# ================
+# Data files - ignore actual images
+data/ir/*.jpg
+data/ir/*.jpeg
+data/ir/*.png
+data/ir/*.tiff
+data/ir/*.tif
+data/optical/*.jpg
+data/optical/*.jpeg
+data/optical/*.png
+data/optical/*.bmp
+
+# Generated maps (ignore intermediate)
+test_threat_map.html
+test_multi_threat_map.html
+
+# Logs and test results
+logs/
+*.log
+webcam_test_report.json
+performance_test.json
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Video files
+*.mp4
+*.avi
+*.mov
+
+# Large data files
+*.dat
+*.bin
+
+# Cache
+.cache/
+cache/
+
+# Development
+scratch/
+experiments/
+dev/
+
+# Keep Important Files
+# ====================
+!requirements.txt
+!requirements_windows.txt
+!test_threat_map_final.html
+!test_multi_threat_map_final.html

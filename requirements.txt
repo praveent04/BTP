@@ -1,0 +1,28 @@
+# Threat Detection System - Raspberry Pi Requirements
+# Production deployment on Raspberry Pi with real camera hardware
+
+# Core Computer Vision
+opencv-python==4.8.0.76
+numpy==1.24.3
+
+# Kalman Filtering
+filterpy==1.4.5
+scipy==1.10.1
+
+# Bayesian Network
+pgmpy==0.1.23
+networkx==3.1
+
+# GIS and Mapping
+folium==0.14.0
+branca==0.6.0
+
+# Web Server
+flask==2.3.2
+werkzeug==2.3.6
+
+# Coordinate Transformations
+pyproj==3.6.0
+
+# Additional utilities
+pandas==2.0.3

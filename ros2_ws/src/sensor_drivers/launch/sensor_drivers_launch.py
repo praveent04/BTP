@@ -51,6 +51,30 @@ def generate_launch_description():
         ),
         Node(
             package='sensor_drivers',
+            executable='enhanced_preprocessing_node.py',
+            name='enhanced_preprocessing_node',
+            output='screen',
+            parameters=[
+                {'use_ml_detection': False},  # Set to True when ML models are available
+                {'enable_performance_monitoring': True},
+                {'thermal_enhancement': True},
+                {'object_tracking': True},
+                {'alert_system_enabled': True}
+            ]
+        ),
+        Node(
+            package='sensor_drivers',
+            executable='system_monitor.py',
+            name='system_monitor',
+            output='screen',
+            parameters=[
+                {'enable_alerts': True},
+                {'alert_log_file': 'logs/system_alerts.log'},
+                {'metrics_log_file': 'logs/system_metrics.log'}
+            ]
+        ),
+        Node(
+            package='sensor_drivers',
             executable='time_sync_monitor.py',
             name='time_sync_monitor',
             output='screen'

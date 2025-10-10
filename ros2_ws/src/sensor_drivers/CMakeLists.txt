@@ -19,13 +19,27 @@ find_package(OpenCV REQUIRED)
 
 include_directories(include)
 
+# Hardware Interface Library
+add_library(hardware_interface_lib
+  src/hardware_interface.cpp
+)
+ament_target_dependencies(hardware_interface_lib rclcpp sensor_msgs cv_bridge image_transport OpenCV)
+
+# ML Detector Library
+add_library(ml_detector_lib
+  src/ml_detector.cpp
+)
+ament_target_dependencies(ml_detector_lib rclcpp sensor_msgs cv_bridge image_transport OpenCV)
+
 # IR Camera Node
 add_executable(ir_camera_node src/ir_camera_node.cpp src/ir_driver.cpp)
 ament_target_dependencies(ir_camera_node rclcpp sensor_msgs cv_bridge image_transport OpenCV)
+target_link_libraries(ir_camera_node hardware_interface_lib)
 
 # EO Camera Node
 add_executable(eo_camera_node src/eo_camera_node.cpp src/eo_driver.cpp)
 ament_target_dependencies(eo_camera_node rclcpp sensor_msgs cv_bridge image_transport OpenCV)
+target_link_libraries(eo_camera_node hardware_interface_lib)
 
 # Radar Node
 add_executable(radar_node src/radar_node.cpp)
@@ -47,6 +61,17 @@ install(TARGETS
 install(PROGRAMS
   src/preprocessing_node.py
   src/time_sync_monitor.py
+  src/enhanced_preprocessing_node.py
+  src/system_monitor.py
+  src/threat_detector_node.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+# Install test scripts
+install(PROGRAMS
+  test_sensor_pipeline.py
+  validate_code.py
+  test_enhanced_system.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
