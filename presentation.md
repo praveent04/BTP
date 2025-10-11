@@ -1,9 +1,9 @@
 # 🎯 THREAT DETECTION & TRACKING SYSTEM - COMPREHENSIVE PRESENTATION
 
 ## 📅 Date: October 11, 2025
-## 👥 Project Team: BTP (Ballistic Threat Protection)
-## 🎓 Institution: Academic Research Project
-
+## 👥 Project Team: Narayan Mishra ( 22AE10025 ) & Praveen Tiwari ( 22AE10030 )
+## 🎓 Institution: Indian Institute of Technology Kharagpur 
+## Instructor : Prof. Richa Ahuja
 ---
 
 # 📋 TABLE OF CONTENTS
