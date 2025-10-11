@@ -1,9 +1,9 @@
 # 🎯 THREAT DETECTION & TRACKING SYSTEM - COMPREHENSIVE PRESENTATION
 
 ## 📅 Date: October 11, 2025
-## 👥 Project Team: BTP (Ballistic Threat Protection)
-## 🎓 Institution: Academic Research Project
-
+## 👥 Project Team: Narayan Mishra ( 22AE10025 ) & Praveen Tiwari ( 22AE10030 )
+## 🎓 Institution: Indian Institute of Technology Kharagpur 
+## Instructor : Prof. Richa Ahuja
 ---
 
 # 📋 TABLE OF CONTENTS
@@ -1830,4 +1830,144 @@ SYSTEM_CONFIG = {
     'log_level': 'INFO',
     'max_tracking_duration': 300,   # 5 minutes
 }
+<<<<<<< HEAD
 ```
+=======
+```
+
+### Multi-Missile Configuration
+```python
+multi_config = {
+    'num_missiles': 3,              # Number of simultaneous missiles
+    'tracking_duration': 30.0,      # Seconds to track (None = auto)
+    'launch_interval': 50,          # Frames between launches
+    'assignment_threshold': 50      # Pixels for tracker assignment
+}
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+#### Import Errors
+```powershell
+# Solution: Install missing packages
+pip install -r requirements_windows.txt
+```
+
+#### Camera Not Found
+```powershell
+# Check available cameras
+python -c "import cv2; print([i for i in range(5) if cv2.VideoCapture(i).isOpened()])"
+```
+
+#### Web Server Issues
+```powershell
+# Kill existing server
+netstat -ano | findstr :5000
+taskkill /PID <PID> /F
+
+# Or change port in config
+'web_server_port': 5001
+```
+
+#### Performance Issues
+```powershell
+# Reduce frame rate
+'fps': 15
+
+# Increase thresholds
+'ir_threshold': 240
+'min_hotspot_area': 150
+```
+
+---
+
+# 13. CONCLUSION
+
+## 🎯 Project Achievements
+
+### Technical Accomplishments
+1. **Complete Threat Detection Pipeline**: From sensor input to geographic visualization
+2. **Multi-Missile Tracking**: Simultaneous tracking of up to 10 missiles
+3. **Real-time Performance**: 30 FPS processing with <100ms latency
+4. **Production Ready**: Deployable on Raspberry Pi with real hardware
+5. **Cross-platform**: Windows demo + Linux production deployment
+6. **Advanced Algorithms**: Bayesian fusion, UKF tracking, coordinate transformation
+
+### Algorithm Innovation
+- **Bayesian Sensor Fusion**: Probabilistic decision making for reliable detection
+- **Unscented Kalman Filter**: Robust trajectory estimation under uncertainty
+- **Real-time Coordinate Transformation**: Pixel-to-GPS conversion for geographic awareness
+- **Multi-target Tracking**: Intelligent tracker assignment and management
+
+### System Architecture
+- **Modular Design**: Clean separation of concerns with independent components
+- **Real-time Processing**: Optimized pipeline for 30 FPS operation
+- **Web-based Visualization**: Interactive maps with live trajectory updates
+- **Comprehensive Testing**: Unit tests, integration tests, and performance benchmarks
+
+## 🚀 Future Development Roadmap
+
+### Immediate Next Steps (3-6 months)
+1. **Hardware Integration**: Deploy on Jetson platform for better performance
+2. **Machine Learning**: Implement CNN-based detection for improved accuracy
+3. **Multi-sensor Fusion**: Add radar/LiDAR integration
+4. **Cloud Connectivity**: Real-time data streaming to command centers
+
+### Medium-term Goals (6-12 months)
+1. **Distributed Architecture**: Multi-node deployment across vehicle network
+2. **AI Enhancement**: Deep learning for threat classification and prediction
+3. **Autonomous Response**: Integration with countermeasures systems
+4. **Advanced Analytics**: Trajectory analysis and threat pattern recognition
+
+### Long-term Vision (1-2 years)
+1. **Swarm Coordination**: Multi-platform coordination for comprehensive coverage
+2. **Predictive Analytics**: Machine learning for threat prediction
+3. **Autonomous Operation**: Full autonomous threat detection and response
+4. **International Standards**: Compliance with military/aviation standards
+
+## 📚 Key Learnings
+
+### Technical Insights
+- **Sensor Fusion Importance**: Combining multiple sensor modalities significantly improves detection reliability
+- **Real-time Constraints**: Algorithm optimization is crucial for maintaining frame rates
+- **Geographic Context**: Coordinate transformation adds critical situational awareness
+- **Modular Architecture**: Clean component separation enables easier testing and maintenance
+
+### Project Management
+- **Incremental Development**: Building and testing components individually reduces integration risks
+- **Performance Benchmarking**: Early performance testing prevents optimization bottlenecks
+- **Documentation**: Comprehensive documentation is essential for complex systems
+- **Cross-platform Development**: Designing for multiple platforms from the start
+
+## 🎖️ Acknowledgments
+
+### Technology Contributors
+- **OpenCV**: Computer vision foundation
+- **FilterPy**: Kalman filtering library
+- **pgmpy**: Probabilistic graphical models
+- **Folium**: Interactive mapping
+- **Flask**: Web framework
+
+### Academic Guidance
+- Algorithm design and validation
+- Performance optimization strategies
+- Real-world deployment considerations
+- Testing methodology development
+
+## 📞 Contact Information
+
+For technical inquiries, collaboration opportunities, or deployment assistance:
+
+- **Project Repository**: [GitHub Link]
+- **Documentation**: Comprehensive guides in `/docs` directory
+- **Issue Tracking**: GitHub Issues for bug reports and feature requests
+- **Email**: [Contact Email]
+
+---
+
+**End of Presentation Document**
+
+*This comprehensive presentation covers the complete Threat Detection & Tracking System implementation, from algorithm design to production deployment. The system represents a significant advancement in real-time ballistic threat detection technology.*
+>>>>>>> ccbfaf295cee765ca51eebbf8d1f96d4026c379b
