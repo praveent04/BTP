@@ -240,27 +240,6 @@ python validate_multi_missile.py
 
 ---
 
-## 🎯 QUICK START CHEATSHEET
-
-### **For Presentations**:
-1. **Demo Launch**: `python run_test.py`
-2. **Multi Demo**: `python run_multi_missile_test.py`
-3. **Web Interface**: Open `http://localhost:5000`
-4. **Exit**: Press 'q' in video windows
-
-### **Key Demo Points**:
-- **Frame 50**: Simulated missile launch
-- **Detection**: Console alert with coordinates
-- **Tracking**: Real-time trajectory updates
-- **Map**: Live geographic visualization
-
-### **Performance Highlights**:
-- **30 FPS**: Real-time processing
-- **<100ms**: Detection latency
-- **95%**: Detection accuracy
-- **10 missiles**: Maximum simultaneous tracking
-
----
 
 ## 📞 SUPPORT & RESOURCES
 
