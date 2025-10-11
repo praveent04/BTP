@@ -1,4 +1,6 @@
-# 🎯 THREAT DETECTION & TRACKING SYSTEM - COMPREHENSIVE PRESENTATION
+# 🎯 THREAT DETECTION & TRACKING SYSTEM
+## Multi-Modal Sensor Fusion for Robust Threat Detection and Trajectory Prediction
+
 
 ## 📅 Date: October 11, 2025
 ## 👥 Project Team: Narayan Mishra ( 22AE10025 ) & Praveen Tiwari ( 22AE10030 )
